@@ -96,6 +96,7 @@
       <transition name="multiselect">
         <div
           class="multiselect__content-wrapper"
+          :class="contentWrapperClass"
           v-if="isOpen && ready"
           @focus="activate"
           tabindex="-1"
@@ -346,6 +347,14 @@ export default {
     useTeleport: {
       type: Boolean,
       default: false
+    },
+    /**
+     * Classes to apply to the `multiselect__content-wrapper` element. This element is a teleport element (when enabled), so can be used to specifically target
+     * the teleported element
+     */
+    contentWrapperClass: {
+      type: [String, Array, Object],
+      default: ""
     }
   },
   data () {

@@ -324,6 +324,12 @@
           <td class="table__td">Uses Vue Teleport's feature. Teleports the open dropdown to the bottom of the <kbd>body</kbd> element.<br /><b>Added in v3.3.1</b></td>
         </tr>
         <tr class="table__tr">
+          <td class="table__td"><strong>contentWrapperClass</strong></td>
+          <td class="table__td">String, Array, or Object</td>
+          <td class="table__td"><kbd>""</kbd></td>
+          <td class="table__td">Classes to apply to the <kbd>multiselect__content-wrapper</kbd> element. This element is a teleport element (when enabled), so can be used to specifically target the teleported element<br /><b>Added in v3.4</b></td>
+        </tr>
+        <tr class="table__tr">
           <td class="table__td utils--center" colspan="4"><strong>pointerMixin.js</strong></td>
         </tr>
         <tr class="table__tr">
