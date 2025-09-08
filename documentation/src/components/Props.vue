@@ -325,7 +325,7 @@
         </tr>
         <tr class="table__tr">
           <td class="table__td"><strong>contentWrapperClass</strong></td>
-          <td class="table__td">Boolean</td>
+          <td class="table__td">String, Array, or Object</td>
           <td class="table__td"><kbd>false</kbd></td>
           <td class="table__td">Classes to apply to the <kbd>multiselect__content-wrapper</kbd> element. This element is a teleport element (when enabled), so can be used to specifically target the teleported element<br /><b>Added in v3.4</b></td>
         </tr>
