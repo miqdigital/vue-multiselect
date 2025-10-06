@@ -1086,6 +1086,14 @@ var script = {
     useTeleport: {
       type: Boolean,
       default: false
+    },
+    /**
+     * Classes to apply to the `multiselect__content-wrapper` element. This element is a teleport element (when enabled), so can be used to specifically target
+     * the teleported element
+     */
+    contentWrapperClass: {
+      type: [String, Array, Object],
+      default: ''
     }
   },
   data () {
@@ -1207,7 +1215,7 @@ const _hoisted_2 = {
 };
 const _hoisted_3 = { class: "multiselect__tags-wrap" };
 const _hoisted_4 = ["textContent"];
-const _hoisted_5 = ["onKeypress", "onMousedown"];
+const _hoisted_5 = ["onKeydown", "onMousedown"];
 const _hoisted_6 = ["textContent"];
 const _hoisted_7 = { class: "multiselect__spinner" };
 const _hoisted_8 = ["name", "id", "spellcheck", "placeholder", "required", "value", "disabled", "tabindex", "aria-label", "aria-controls"];
@@ -1228,9 +1236,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onBlur: _cache[15] || (_cache[15] = $event => (_ctx.searchable ? false : _ctx.deactivate())),
     onKeydown: [
       _cache[16] || (_cache[16] = vue.withKeys(vue.withModifiers($event => (_ctx.pointerForward()), ["self","prevent"]), ["down"])),
-      _cache[17] || (_cache[17] = vue.withKeys(vue.withModifiers($event => (_ctx.pointerBackward()), ["self","prevent"]), ["up"]))
+      _cache[17] || (_cache[17] = vue.withKeys(vue.withModifiers($event => (_ctx.pointerBackward()), ["self","prevent"]), ["up"])),
+      _cache[18] || (_cache[18] = vue.withKeys(vue.withModifiers($event => (_ctx.addPointerElement($event)), ["stop","self"]), ["enter","tab"]))
     ],
-    onKeypress: _cache[18] || (_cache[18] = vue.withKeys(vue.withModifiers($event => (_ctx.addPointerElement($event)), ["stop","self"]), ["enter","tab"])),
     onKeyup: _cache[19] || (_cache[19] = vue.withKeys($event => (_ctx.deactivate()), ["esc"])),
     role: "combobox",
     "aria-expanded": _ctx.isOpen,
@@ -1268,7 +1276,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                 }, null, 8 /* PROPS */, _hoisted_4),
                 vue.createElementVNode("i", {
                   tabindex: "1",
-                  onKeypress: vue.withKeys(vue.withModifiers($event => (_ctx.removeElement(option)), ["prevent"]), ["enter"]),
+                  onKeydown: vue.withKeys(vue.withModifiers($event => (_ctx.removeElement(option)), ["prevent"]), ["enter"]),
                   onMousedown: vue.withModifiers($event => (_ctx.removeElement(option)), ["prevent"]),
                   class: "multiselect__tag-icon"
                 }, null, 40 /* PROPS, NEED_HYDRATION */, _hoisted_5)
@@ -1320,9 +1328,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             onKeydown: [
               _cache[6] || (_cache[6] = vue.withKeys(vue.withModifiers($event => (_ctx.pointerForward()), ["prevent"]), ["down"])),
               _cache[7] || (_cache[7] = vue.withKeys(vue.withModifiers($event => (_ctx.pointerBackward()), ["prevent"]), ["up"])),
+              _cache[8] || (_cache[8] = vue.withKeys(vue.withModifiers($event => (_ctx.addPointerElement($event)), ["prevent","stop","self"]), ["enter"])),
               _cache[9] || (_cache[9] = vue.withKeys(vue.withModifiers($event => (_ctx.removeLastElement()), ["stop"]), ["delete"]))
             ],
-            onKeypress: _cache[8] || (_cache[8] = vue.withKeys(vue.withModifiers($event => (_ctx.addPointerElement($event)), ["prevent","stop","self"]), ["enter"])),
             class: "multiselect__input",
             "aria-controls": 'listbox-'+_ctx.id
           }, null, 44 /* STYLE, PROPS, NEED_HYDRATION */, _hoisted_8))
@@ -1359,7 +1367,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           (_ctx.isOpen && $data.ready)
             ? (vue.openBlock(), vue.createElementBlock("div", {
                 key: 0,
-                class: "multiselect__content-wrapper",
+                class: vue.normalizeClass(["multiselect__content-wrapper", $props.contentWrapperClass]),
                 onFocus: _cache[12] || (_cache[12] = (...args) => (_ctx.activate && _ctx.activate(...args))),
                 tabindex: "-1",
                 onMousedown: _cache[13] || (_cache[13] = vue.withModifiers(() => {}, ["prevent"])),
@@ -1452,7 +1460,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
                   ]),
                   vue.renderSlot(_ctx.$slots, "afterList")
                 ], 12 /* STYLE, PROPS */, _hoisted_9)
-              ], 36 /* STYLE, NEED_HYDRATION */))
+              ], 38 /* CLASS, STYLE, NEED_HYDRATION */))
             : vue.createCommentVNode("v-if", true)
         ]),
         _: 3 /* FORWARDED */
