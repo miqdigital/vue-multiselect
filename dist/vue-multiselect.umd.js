@@ -4702,7 +4702,7 @@ var es_regexp_exec = __webpack_require__(7495);
 var es_string_search = __webpack_require__(5746);
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(9274);
-;// ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/Multiselect.vue?vue&type=template&id=0cabff4f
+;// ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/Multiselect.vue?vue&type=template&id=4e0a6f2d
 
 
 
@@ -4716,7 +4716,7 @@ var _hoisted_3 = {
   "class": "multiselect__tags-wrap"
 };
 var _hoisted_4 = ["textContent"];
-var _hoisted_5 = ["onKeypress", "onMousedown"];
+var _hoisted_5 = ["onKeydown", "onMousedown"];
 var _hoisted_6 = ["textContent"];
 var _hoisted_7 = {
   "class": "multiselect__spinner"
@@ -4757,10 +4757,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return _ctx.pointerForward();
     }, ["self", "prevent"]), ["down"])), _cache[17] || (_cache[17] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
       return _ctx.pointerBackward();
-    }, ["self", "prevent"]), ["up"]))],
-    onKeypress: _cache[18] || (_cache[18] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
+    }, ["self", "prevent"]), ["up"])), _cache[18] || (_cache[18] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
       return _ctx.addPointerElement($event);
-    }, ["stop", "self"]), ["enter", "tab"])),
+    }, ["stop", "self"]), ["enter", "tab"]))],
     onKeyup: _cache[19] || (_cache[19] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)(function ($event) {
       return _ctx.deactivate();
     }, ["esc"])),
@@ -4799,7 +4798,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           textContent: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)(_ctx.getOptionLabel(option))
         }, null, 8, _hoisted_4), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("i", {
           tabindex: "1",
-          onKeypress: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
+          onKeydown: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
             return _ctx.removeElement(option);
           }, ["prevent"]), ["enter"]),
           onMousedown: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
@@ -4856,12 +4855,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return _ctx.pointerForward();
     }, ["prevent"]), ["down"])), _cache[7] || (_cache[7] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
       return _ctx.pointerBackward();
-    }, ["prevent"]), ["up"])), _cache[9] || (_cache[9] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
+    }, ["prevent"]), ["up"])), _cache[8] || (_cache[8] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
+      return _ctx.addPointerElement($event);
+    }, ["prevent", "stop", "self"]), ["enter"])), _cache[9] || (_cache[9] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
       return _ctx.removeLastElement();
     }, ["stop"]), ["delete"]))],
-    onKeypress: _cache[8] || (_cache[8] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withKeys)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)(function ($event) {
-      return _ctx.addPointerElement($event);
-    }, ["prevent", "stop", "self"]), ["enter"])),
     "class": "multiselect__input",
     "aria-controls": 'listbox-' + _ctx.id
   }, null, 44, _hoisted_8)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $options.isSingleLabelVisible ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("span", {
@@ -4891,7 +4889,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withCtx)(function () {
       return [_ctx.isOpen && $data.ready ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", {
         key: 0,
-        "class": "multiselect__content-wrapper",
+        "class": (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["multiselect__content-wrapper", $props.contentWrapperClass]),
         onFocus: _cache[12] || (_cache[12] = function () {
           return _ctx.activate && _ctx.activate.apply(_ctx, arguments);
         }),
@@ -4960,12 +4958,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return [_cache[20] || (_cache[20] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("No elements found. Consider changing the search query."))];
       })])], 512), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showNoResults && _ctx.filteredOptions.length === 0 && _ctx.search && !$props.loading]]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("li", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("span", _hoisted_16, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "noOptions", {}, function () {
         return [_cache[21] || (_cache[21] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("List is empty."))];
-      })])], 512), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showNoOptions && (_ctx.options.length === 0 || $options.hasOptionGroup === true && _ctx.filteredOptions.length === 0) && !_ctx.search && !$props.loading]]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "afterList")], 12, _hoisted_9)], 36)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)];
+      })])], 512), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showNoOptions && (_ctx.options.length === 0 || $options.hasOptionGroup === true && _ctx.filteredOptions.length === 0) && !_ctx.search && !$props.loading]]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "afterList")], 12, _hoisted_9)], 38)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)];
     }),
     _: 3
   })], 8, ["disabled"]))], 42, _hoisted_1);
 }
-;// ./src/Multiselect.vue?vue&type=template&id=0cabff4f
+;// ./src/Multiselect.vue?vue&type=template&id=4e0a6f2d
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.slice.js
 var es_array_slice = __webpack_require__(4782);
@@ -6137,6 +6135,14 @@ var flow = function flow() {
     useTeleport: {
       type: Boolean,
       "default": false
+    },
+    /**
+     * Classes to apply to the `multiselect__content-wrapper` element. This element is a teleport element (when enabled), so can be used to specifically target
+     * the teleported element
+     */
+    contentWrapperClass: {
+      type: [String, Array, Object],
+      "default": ''
     }
   },
   data: function data() {
@@ -6243,10 +6249,10 @@ var flow = function flow() {
 });
 ;// ./src/Multiselect.vue?vue&type=script&lang=js
  
-;// ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/Multiselect.vue?vue&type=style&index=0&id=0cabff4f&lang=css
+;// ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-54.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-54.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-54.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/Multiselect.vue?vue&type=style&index=0&id=4e0a6f2d&lang=css
 // extracted by mini-css-extract-plugin
 
-;// ./src/Multiselect.vue?vue&type=style&index=0&id=0cabff4f&lang=css
+;// ./src/Multiselect.vue?vue&type=style&index=0&id=4e0a6f2d&lang=css
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(6262);

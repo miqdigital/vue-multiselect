@@ -354,7 +354,7 @@ export default {
      */
     contentWrapperClass: {
       type: [String, Array, Object],
-      default: ""
+      default: ''
     }
   },
   data () {
