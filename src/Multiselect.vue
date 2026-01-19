@@ -92,7 +92,7 @@
         </slot>
       </span>
     </div>
-    <teleport to="body" :disabled="!useTeleport">
+    <teleport :to="teleportTarget" :disabled="!useTeleport">
       <transition name="multiselect">
         <div
           class="multiselect__content-wrapper"
@@ -340,13 +340,22 @@ export default {
       default: false
     },
     /**
-     * Uses Vue Teleport's feature. Teleports the open dropdown to the bottom of the body element
+     * Uses Vue Teleport's feature. Teleports the open dropdown to the bottom of the teleportTarget element
      * @default false
      * @type {Boolean}
      */
     useTeleport: {
       type: Boolean,
       default: false
+    },
+    /**
+     * Target selector for teleporting the dropdown element
+     * @default 'body'
+     * @type {String|Object}
+     */
+    teleportTarget: {
+      type: [String, Object],
+      default: 'body'
     },
     /**
      * Classes to apply to the `multiselect__content-wrapper` element. This element is a teleport element (when enabled), so can be used to specifically target

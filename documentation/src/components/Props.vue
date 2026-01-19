@@ -321,7 +321,13 @@
           <td class="table__td"><strong>useTeleport</strong></td>
           <td class="table__td">Boolean</td>
           <td class="table__td"><kbd>false</kbd></td>
-          <td class="table__td">Uses Vue Teleport's feature. Teleports the open dropdown to the bottom of the <kbd>body</kbd> element.<br /><b>Added in v3.3.1</b></td>
+          <td class="table__td">Uses Vue Teleport's feature. Teleports the open dropdown to the bottom of the <kbd>teleportTarget</kbd> element.<br /><b>Added in v3.3.1</b></td>
+        </tr>
+        <tr class="table__tr">
+          <td class="table__td"><strong>teleportTarget</strong></td>
+          <td class="table__td">String, Object</td>
+          <td class="table__td"><kbd>"body"</kbd></td>
+          <td class="table__td">Target selector for teleporting the dropdown element</td>
         </tr>
         <tr class="table__tr">
           <td class="table__td"><strong>contentWrapperClass</strong></td>
