@@ -129,7 +129,7 @@ export default {
       }
 
       if (this.filteredOptions.length > 0 &&
-        this.filteredOptions[this.pointer] &&  
+        this.filteredOptions[this.pointer] &&
         this.filteredOptions[this.pointer].$isLabel &&
         !this.groupSelect
       ) {
